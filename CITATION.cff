@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+
+title: "Gazebo-Sionna RT Integration"
+
+message: >
+  If you use this software in your research, please cite it using
+  the metadata from this file.
+
+type: software
+
+authors:
+
+  - family-names: "H.P."
+    given-names: "Madushanka"
+    email: "Madushanka.HewaPathiranage@oulu.fi"
+    orcid: "https://orcid.org/0009-0008-0530-5731"
+
+  - family-names: "Samarakoon"
+    given-names: "Sumudu"
+    email: "sumudu.samarakoon@oulu.fi"
+    orcid: "https://orcid.org/0000-0002-2382-1982"
+
+  - family-names: "Bennis"
+    given-names: "Mehdi"
+    email: "mehdi.bennis@oulu.fi"
+    orcid: "https://orcid.org/0000-0003-0261-0171"
+
+repository-code: "https://github.com/ICONgroupCWC/Gazebo-Sionna-RT-Integration"
+
+abstract: >
+  This repository provides an integration framework for Gazebo and
+  Sionna RT for joint robotic and wireless simulation. It includes
+  Gazebo world models, corresponding Sionna RT XML scene models,
+  and the ROS-based integration required to synchronize the robotic
+  simulation with wireless channel generation.
+
+keywords:
+
+  - Gazebo
+  - Sionna RT
+  - ROS
+  - Wireless Simulation
+  - Ray Tracing
+  - Robotics
+  - Wireless Channels
+  - Digital Twin
+
+license: MIT
