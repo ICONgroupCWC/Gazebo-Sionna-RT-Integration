@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ROS
+build/
+devel/
+install/
+log/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Large/generated files
+*.bag

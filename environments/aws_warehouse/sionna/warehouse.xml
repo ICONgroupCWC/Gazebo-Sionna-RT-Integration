@@ -1,0 +1,312 @@
+<scene version="2.1.0">
+
+<!-- Defaults, these can be set via the command line: -Darg=value -->
+
+
+<!-- Camera and Rendering Parameters -->
+
+	<integrator type="path" id="elm__0" name="elm__0">
+		<integer name="max_depth" value="12"/>
+	</integrator>
+
+<!-- Materials -->
+
+	<bsdf type="twosided" id="mat-itu_metal" name="mat-itu_metal">
+		<bsdf type="diffuse" name="bsdf">
+			<rgb value="0.000000 0.000000 0.000000" name="reflectance"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="mat-itu_chipboard" name="mat-itu_chipboard">
+		<bsdf type="diffuse" name="bsdf">
+			<rgb value="0.800023 0.328851 0.019931" name="reflectance"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="mat-itu_plywood" name="mat-itu_plywood">
+		<bsdf type="diffuse" name="bsdf">
+			<rgb value="0.038659 0.800032 0.440264" name="reflectance"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="mat-itu_brick" name="mat-itu_brick">
+		<bsdf type="principled" name="bsdf">
+			<texture type="bitmap" name="base_color">
+				<string name="filename" value="textures/aws_robomaker_warehouse_WallB_01.png"/>
+			</texture>
+			<rgb value="1.000000 1.000000 1.000000" name="spec_tint"/>
+			<float name="spec_trans" value="0.000000"/>
+			<float name="metallic" value="0.000000"/>
+			<float name="anisotropic" value="0.000000"/>
+			<float name="roughness" value="1.000000"/>
+			<float name="sheen" value="0.000000"/>
+			<rgb value="1.000000 1.000000 1.000000" name="sheen_tint"/>
+			<float name="clearcoat" value="0.000000"/>
+			<float name="clearcoat_gloss" value="0.000900"/>
+			<float name="specular" value="0.500000"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="mat-itu_concrete" name="mat-itu_concrete">
+		<bsdf type="principled" name="bsdf">
+			<texture type="bitmap" name="base_color">
+				<string name="filename" value="textures/aws_robomaker_warehouse_GroundB_01.png"/>
+			</texture>
+			<rgb value="1.000000 1.000000 1.000000" name="spec_tint"/>
+			<float name="spec_trans" value="0.000000"/>
+			<float name="metallic" value="0.000000"/>
+			<float name="anisotropic" value="0.000000"/>
+			<float name="roughness" value="1.000000"/>
+			<float name="sheen" value="0.000000"/>
+			<rgb value="1.000000 1.000000 1.000000" name="sheen_tint"/>
+			<float name="clearcoat" value="0.000000"/>
+			<float name="clearcoat_gloss" value="0.000900"/>
+			<float name="specular" value="0.500000"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="mat-itu_glass" name="mat-itu_glass">
+		<bsdf type="principled" name="bsdf">
+			<texture type="bitmap" name="base_color">
+				<string name="filename" value="textures/aws_robomaker_warehouse_Lamp_01.png"/>
+			</texture>
+			<rgb value="1.000000 1.000000 1.000000" name="spec_tint"/>
+			<float name="spec_trans" value="0.000000"/>
+			<float name="metallic" value="0.000000"/>
+			<float name="anisotropic" value="0.000000"/>
+			<float name="roughness" value="1.000000"/>
+			<float name="sheen" value="0.000000"/>
+			<rgb value="1.000000 1.000000 1.000000" name="sheen_tint"/>
+			<float name="clearcoat" value="0.000000"/>
+			<float name="clearcoat_gloss" value="0.000900"/>
+			<float name="specular" value="0.500000"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="mat-itu_wood" name="mat-itu_wood">
+		<bsdf type="diffuse" name="bsdf">
+			<rgb value="0.012997 0.800016 0.007224" name="reflectance"/>
+		</bsdf>
+	</bsdf>
+
+<!-- Emitters -->
+
+
+<!-- Shapes -->
+
+	<shape type="ply" id="elm__4" name="elm__4">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfF_01_visual_node-itu_metal.ply"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__5" name="elm__5">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfF_01_visual_node-itu_chipboard.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__6" name="elm__6">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfF_01_visual_node-itu_plywood.ply"/>
+		<ref id="mat-itu_plywood" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__8" name="elm__8">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_WallB_01_visual_node.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__9" name="elm__9">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfE_01_visual_node-itu_metal.ply"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__10" name="elm__10">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfE_01_visual_node-itu_chipboard.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__11" name="elm__11">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfE_01_visual_node-itu_chipboard-001.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__12" name="elm__12">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfE_01_visual_node-itu_chipboard-002.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__13" name="elm__13">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfE_01_visual_node_001-itu_metal.ply"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__14" name="elm__14">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfE_01_visual_node_001-itu_chipboard.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__15" name="elm__15">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfE_01_visual_node_001-itu_chipboard-001.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__16" name="elm__16">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfE_01_visual_node_001-itu_chipboard-002.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__17" name="elm__17">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfE_01_visual_node_002-itu_metal.ply"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__18" name="elm__18">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfE_01_visual_node_002-itu_chipboard.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__19" name="elm__19">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfE_01_visual_node_002-itu_chipboard-001.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__20" name="elm__20">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfE_01_visual_node_002-itu_chipboard-002.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__21" name="elm__21">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfD_01_visual_node-itu_metal.ply"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__22" name="elm__22">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfD_01_visual_node-itu_chipboard.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__23" name="elm__23">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfD_01_visual_node-itu_chipboard-001.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__24" name="elm__24">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfD_01_visual_node-itu_chipboard-002.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__25" name="elm__25">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfD_01_visual_node_001-itu_metal.ply"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__26" name="elm__26">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfD_01_visual_node_001-itu_chipboard.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__27" name="elm__27">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfD_01_visual_node_001-itu_chipboard-001.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__28" name="elm__28">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfD_01_visual_node_001-itu_chipboard-002.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__29" name="elm__29">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfD_01_visual_node_002-itu_metal.ply"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__30" name="elm__30">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfD_01_visual_node_002-itu_chipboard.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__31" name="elm__31">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfD_01_visual_node_002-itu_chipboard-001.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__32" name="elm__32">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ShelfD_01_visual_node_002-itu_chipboard-002.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__34" name="elm__34">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_GroundB_01_visual_node-itu_concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__35" name="elm__35">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_GroundB_01_visual_node-itu_concrete-001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__37" name="elm__37">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_Lamp_01_visual_node.ply"/>
+		<ref id="mat-itu_glass" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__38" name="elm__38">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_Bucket_01_visual_node.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_plywood" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__39" name="elm__39">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_Bucket_01_visual_node_001.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_plywood" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__40" name="elm__40">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_Bucket_01_visual_node_002.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_plywood" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__41" name="elm__41">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ClutteringA_01_visual_node-itu_chipboard.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__42" name="elm__42">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ClutteringA_01_visual_node-itu_chipboard-001.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__43" name="elm__43">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ClutteringA_01_visual_node-itu_chipboard-002.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__44" name="elm__44">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ClutteringA_01_visual_node_001-itu_chipboard.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__45" name="elm__45">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ClutteringA_01_visual_node_001-itu_chipboard-001.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__46" name="elm__46">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ClutteringA_01_visual_node_001-itu_chipboard-002.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__47" name="elm__47">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ClutteringA_01_visual_node_002-itu_chipboard.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__48" name="elm__48">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ClutteringA_01_visual_node_002-itu_chipboard-001.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__49" name="elm__49">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ClutteringA_01_visual_node_002-itu_chipboard-002.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__50" name="elm__50">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ClutteringC_01_visual_node.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__51" name="elm__51">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ClutteringC_01_visual_node_001.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__52" name="elm__52">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ClutteringC_01_visual_node_002.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__53" name="elm__53">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ClutteringC_01_visual_node_003.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__54" name="elm__54">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ClutteringC_01_visual_node_004.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__55" name="elm__55">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ClutteringC_01_visual_node_005.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__56" name="elm__56">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_ClutteringD_01_visual_node.ply"/>
+		<ref id="mat-itu_chipboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__58" name="elm__58">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_TrashCanC_01_visual_node.ply"/>
+		<ref id="mat-itu_wood" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__59" name="elm__59">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_PalletJackB_01_visual_node-itu_metal.ply"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="elm__60" name="elm__60">
+		<string name="filename" value="meshes/aws_robomaker_warehouse_PalletJackB_01_visual_node-itu_metal-001.ply"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+
+<!-- Volumes -->
+
+</scene>
